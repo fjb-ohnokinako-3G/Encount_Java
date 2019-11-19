@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+『Androidアプリ開発の教科書』
+第15章
+カメラアプリ連携サンプル
+
+画面定義ファイル。
+
+@author Shinzo SAITO
+
+ファイル名=activity_use_camera.xml
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical">
+
+	<ImageView
+		android:id="@+id/ivCamera"
+		android:layout_width="222dp"
+		android:layout_height="242dp"
+		android:layout_gravity="center"
+		android:onClick="onCameraImageClick"
+		android:scaleType="center"
+		app:srcCompat="@android:drawable/ic_menu_camera" />
+
+	<!--投稿コメント用テキストボックス-->
+<EditText
+	android:id="@+id/commentInput"
+	android:layout_width="match_parent"
+	android:layout_height="60dp"
+	android:layout_marginTop="5dp"
+	android:layout_marginBottom="25dp"
+	android:gravity="top|left"
+	android:hint="コメントを入力"
+	android:maxLength="200"
+	android:inputType="text"
+		/>
+
+<Button
+	android:id="@+id/postButton"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center_horizontal"
+	android:text="投稿(POST)"
+	app:layout_constraintBottom_toBottomOf="parent"
+	app:layout_constraintHorizontal_bias="0.117"
+	app:layout_constraintLeft_toLeftOf="parent"
+	app:layout_constraintRight_toRightOf="parent"
+	app:layout_constraintTop_toTopOf="parent"
+	app:layout_constraintVertical_bias="0.352" />
+
+</LinearLayout>
